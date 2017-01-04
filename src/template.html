@@ -1,0 +1,40 @@
+<div class="ui-input__wrap">
+    <input
+        :type="type"
+        :max="max"
+        :min="min"
+        :name="name"
+        :form="form"
+        :value="value"
+        :class="clazz"
+        class="ui-input"
+        autocomplete="off"
+        :readonly="readonly"
+        :disabled="disabled"
+        :autofocus="autofocus"w
+        :placeholder="placeholder"
+        :maxlength="maxlength"
+        :minlength="minlength"
+        @blur="blurHandler"
+        @focus="focusHandler"
+        @input="inputHandler"
+        v-if="type !== 'textarea'"
+    />
+    <textarea
+        :name="name"
+        :form="form"
+        :value="value"
+        class="ui-textarea"
+        :readonly="readonly"
+        :disabled="disabled"
+        :autofocus="autofocus"
+        :placeholder="placeholder"
+        :maxlength="maxlength"
+        :minlength="minlength"
+        @blur="blurHandler"
+        @focus="focusHandler"
+        @input="inputHandler"
+        v-if="type === 'textarea'"
+    >
+    </textarea>
+</div>
